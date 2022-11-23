@@ -1,4 +1,5 @@
-import xlwt
+import io
+import xlsxwriter
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.db.models import Q
@@ -137,32 +138,32 @@ def delete(request, id):
 
 
 def export(_):
-    response = HttpResponse(content_type='application/ms-excel')
-    response['Content-Disposition'] = 'attachment; filename="buku_telepon.xls"'
-
-    wb = xlwt.Workbook(encoding='utf-8')
-    ws = wb.add_sheet('Buku Telepon')
+    buffer = io.BytesIO()
+    wb = xlsxwriter.Workbook(buffer)
+    ws = wb.add_worksheet()
 
     row_num = 0
-
-    font_style = xlwt.XFStyle()
-    font_style.font.bold = True
 
     columns = ['no', 'nama', 'no_telepon', 'alamat', 'perusahaan', ]
 
     for col_num in range(len(columns)):
-        ws.write(row_num, col_num, columns[col_num], font_style)
-
-    font_style = xlwt.XFStyle()
+        ws.write(row_num, col_num, columns[col_num])
 
     rows = BukuTelepon.objects.all().values_list(
-        'nama', 'no_telepon', 'alamat', 'perusahaan')
+        'nama', 'no_telepon', 'alamat', 'perusahaan'
+    )
+
     for row in rows:
         row_num += 1
-        ws.write(row_num, 0, row_num, font_style)
+        ws.write(row_num, 0, row_num)
         for col_num in range(len(row)):
-            ws.write(row_num, col_num + 1, row[col_num], font_style)
+            ws.write(row_num, col_num + 1, row[col_num])
 
-    wb.save(response)
+    wb.close()
+
+    response = HttpResponse(content_type='application/vnd.ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="buku_telepon.xlsx"'
+
+    response.write(buffer.getvalue())
 
     return response
