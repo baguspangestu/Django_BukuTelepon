@@ -9,10 +9,14 @@
 
 ### Run Server
 
-> poetry run python manage.py runserver
+```
+poetry run python manage.py runserver
+```
 
 #### atau
 
-> python manage.py runserver
+```
+python manage.py runserver
+```
 
 ### Sudah disetting untuk di deploy ke [render.com](https://render.com)
