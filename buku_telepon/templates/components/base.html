@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>{% block title %}{% endblock %} - Buku Telepon</title>
+  </head>
+  <body class="text-bg-light">
+    {% comment %}
+    <!-- Toast -->
+    {% if messages %}
+    {% for msg in messages %}
+    <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+      <div class="toast-container p-3 top-0 end-0">
+        <div class="toast align-items-center {% if msg.level == DEFAULT_MESSAGE_LEVELS.ERROR %}text-bg-danger{% else %}text-bg-success{% endif %} border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              {% if msg.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              {% else %}
+              <i class="fa-solid fa-circle-check"></i>
+              {% endif %}
+              {{ msg }}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endcomment %}
+
+    <!-- Head -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand mb-0 h1" href="/"><i class="fa-solid fa-address-book"></i> BUKU TELEPON</a>
+      </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container my-4">{% block content %}{% endblock %}</div>
+    
+    <!-- Foot -->
+    <footer class="text-center text-lg-start text-muted">
+      <div class="text-center text-bg-secondary p-3">
+        © 2022 - Irvanudin
+      </div>
+    </footer>
+    
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>
