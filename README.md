@@ -2,8 +2,14 @@
 
 ### Software yang dibutuhkan
 
-- Python v3.7.0
-- Poetry (versi bebas)
+- [Python v3.7.0](https://www.python.org/downloads/release/python-370)
+- [Poetry (versi terbaru)](https://python-poetry.org)
+
+### Inisialisasi
+
+```
+poetry init
+```
 
 ### Run Server
 
