@@ -8,7 +8,7 @@
 ### Inisialisasi
 
 ```
-poetry init
+poetry install
 ```
 
 ### Run Server
