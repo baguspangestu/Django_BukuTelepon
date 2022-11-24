@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: irvanudin
+    name: buku_telepon
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn irvanudin.wsgi:application"
+    startCommand: "gunicorn buku_telepon.wsgi:application"
     envVars:
       - key: SECRET_KEY
         generateValue: true

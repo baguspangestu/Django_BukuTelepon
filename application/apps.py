@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BukuTeleponConfig(AppConfig):
+class ApplicationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'buku_telepon'
+    name = 'application'

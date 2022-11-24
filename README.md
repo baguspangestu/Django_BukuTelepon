@@ -1,4 +1,4 @@
-# irvanudin-buku_telepon
+# buku_telepon
 
 ### Software yang dibutuhkan
 

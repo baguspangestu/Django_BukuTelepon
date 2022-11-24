@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "irvanudin"
+name = "buku_telepon"
 version = "0.1.0"
 description = ""
 authors = ["Bagus Pangestu <baguspangestu44@gmail.com>"]
