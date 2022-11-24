@@ -181,9 +181,9 @@ Irvanudin
 </div>
 
 <!-- Import -->
-<form method="POST" action="/import">
+<form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
-  <input id="set-import" class="d-none" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+  <input id="set-import" class="d-none" name="file" type="file" accept=".csv, .xlsx" />
   <button id="sub-import" class="d-none" type="submit"></button>
 </form>
 {% endblock %}
