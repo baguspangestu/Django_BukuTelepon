@@ -5,7 +5,7 @@ Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC den
 ### Software
 
 [![Python](https://img.shields.io/badge/Python-^3.7-blue)](https://www.python.org/downloads)
-[![Poetry](https://img.shields.io/badge/Poetry-1.2.2-green)](https://python-poetry.org/docs/#installation)
+[![Poetry](https://img.shields.io/badge/Poetry-^1.2-orange)](https://python-poetry.org/docs/#installation)
 
 #### Framework
 
@@ -22,6 +22,12 @@ Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC den
 | openpyxl   | Engine untuk membaca file xlsx dan xlsm |
 | pyxlsb     | Engine untuk membaca file xlsb          |
 
+### Download
+
+```
+git clone https://github.com/baguspangestu/buku_telepon.git
+```
+
 ### Inisialisasi
 
 ```
@@ -36,4 +42,6 @@ poetry run python manage.py runserver
 
 ### Sudah disetting untuk di deploy ke [render.com](https://render.com)
 
-@2022 Bagus Pangestu - Creative Common
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
+
+@ 2022 Bagus Pangestu <<baguspangestu@yandex.com>>
