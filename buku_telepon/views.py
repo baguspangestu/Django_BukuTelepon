@@ -32,11 +32,20 @@ def import_data(request):
         file_ext = pathlib.Path(file.name).suffix
 
         if file_ext in ext:
-            if file_ext == ext[0]:
+            if file_ext == '.csv':
                 dfs = pd.read_csv(file, dtype=str)
             else:
+                if file_ext == ext[1]:
+                    engine = 'xlrd'
+                elif file_ext in ext[2:4]:
+                    engine = 'openpyxl'
+                elif file_ext in ext[5:8]:
+                    engine = 'odf'
+                else:
+                    engine = 'pyxlsb'
+
                 read = pd.read_excel(
-                    file, engine='openpyxl', dtype=str
+                    file, engine=engine, dtype=str
                 )
                 dfs = pd.DataFrame(read)
 
