@@ -48,7 +48,7 @@ poetry install
 poetry run python manage.py runserver
 ```
 
-### Sudah disetting untuk di deploy ke [render.com](https://render.com)
+#### Sudah disetting untuk di deploy ke [render.com](https://render.com)
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
 
