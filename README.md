@@ -33,7 +33,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 ### Download
 
 ```
-git clone https://github.com/baguspangestu/buku_telepon.git
+git clone https://github.com/baguspangestu/Django_BukuTelepon.git
 ```
 
 ### Inisialisasi
