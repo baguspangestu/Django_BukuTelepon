@@ -209,16 +209,6 @@ Home
   $('#set-import').change(() => {
     const file = $('#set-import').val()
     if(file) return $('#sub-import').click()
-    /*
-    if(file){
-      const ext = file.split('.').pop().toLowerCase()
-      if(ext === 'csv' || ext == 'xls' || ext == 'xlsx') {
-        console.log('File support')
-      }else{
-        console.log('File tidak support')
-      }
-    }
-    */
   })
 
   const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
