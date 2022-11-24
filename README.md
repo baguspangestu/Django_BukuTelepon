@@ -8,8 +8,8 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 ### Software
 
-[![Python](https://img.shields.io/badge/Python-^3.7-blue)](https://www.python.org/downloads)
-[![Poetry](https://img.shields.io/badge/Poetry-^1.2-orange)](https://python-poetry.org/docs/#installation)
+[![Python](https://img.shields.io/badge/Python-3.7.0-blue)](https://www.python.org/downloads)
+[![Poetry](https://img.shields.io/badge/Poetry-1.2.2-orange)](https://python-poetry.org/docs/#installation)
 
 #### Framework
 
