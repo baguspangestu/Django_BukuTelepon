@@ -27,7 +27,6 @@ def validator(data: BukuTelepon):
 def import_data(request):
     if request.method == 'POST' and request.FILES['file']:
         ext = ['.csv', '.xlsx']
-        data = BukuTelepon()
         file = request.FILES['file']
         file_ext = pathlib.Path(file.name).suffix
 
@@ -44,6 +43,7 @@ def import_data(request):
             e_count = 0
 
             for df in dfs.itertuples():
+                data = BukuTelepon()
                 data.nama = df.nama
                 data.no_telepon = df.no_telepon
                 data.alamat = df.alamat
