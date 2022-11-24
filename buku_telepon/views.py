@@ -85,7 +85,7 @@ def import_data(request):
 
         else:
             messages.error(
-                request, 'Format file hanya diizinkan .csv, .xls, .xlsx, .xlsm, .xlsb, .odf, .ods, & .odt')
+                request, 'Format file tidak sesuai!')
 
         return True
 
