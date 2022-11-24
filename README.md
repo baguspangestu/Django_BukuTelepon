@@ -2,10 +2,10 @@
 
 Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC dengan Bahasa Pemrograman Python dan Framework Django.
 
-### Software yang dibutuhkan
+### Software
 
-- [Python v3.7.0](https://www.python.org/downloads/release/python-370)
-- [Poetry v1.2.2](https://python-poetry.org)
+[![Python](https://img.shields.io/badge/Python-v3.7-blue)](https://www.python.org/downloads)
+[![Poetry](https://img.shields.io/badge/Poetry-v1.2-green)](https://python-poetry.org/docs/#installation)
 
 #### Framework
 
