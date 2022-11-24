@@ -6,7 +6,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 > [Live Demo 1](https://kelompok1-bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://kelompok1-bukutelepon.up.railway.app) (US)
 
-### Software
+#### Software
 
 [![Python](https://img.shields.io/badge/Python-3.7.0-blue)](https://www.python.org/downloads)
 [![Poetry](https://img.shields.io/badge/Poetry-1.2.2-orange)](https://python-poetry.org/docs/#installation)
@@ -30,7 +30,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 | openpyxl   | Engine untuk membaca file xlsx dan xlsm |
 | pyxlsb     | Engine untuk membaca file xlsb          |
 
-### 🔥Download
+#### 🔥Download
 
 ```
 git clone https://github.com/baguspangestu/Django_BukuTelepon.git
