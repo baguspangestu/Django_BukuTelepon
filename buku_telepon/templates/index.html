@@ -22,7 +22,7 @@ Home
     <div class="row align-items-center">
       <div class="col">
         <a class="btn btn-primary btn-sm my-1 text-nowrap" href="/add"><i class="fa-solid fa-file-circle-plus"></i> Tambah Data</a>
-        <a id="import" class="btn btn-primary btn-sm my-1 text-nowrap" href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="Support format .csv, .xls, .xlsx, .xlsm, .xlsb, .odf, .ods, & .odt"><i class="fa-solid fa-file-import"></i> Import CSV/Excel</a>
+        <a id="import" class="btn btn-primary btn-sm my-1 text-nowrap" href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="Support format .csv, .xls, .xlsx, .xlsm, dan .xlsb"><i class="fa-solid fa-file-import"></i> Import CSV/Excel</a>
         <a class="btn btn-primary btn-sm my-1 text-nowrap" href="/export"><i class="fa-solid fa-file-export"></i> Export Data</a>
       </div>
       <div class="col-auto">
@@ -183,7 +183,7 @@ Home
 <!-- Import -->
 <form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
-  <input id="set-import" class="d-none" name="file" type="file" accept=".csv, .csv, .xls, .xlsx, .xlsm, .xlsb, .odf, .ods, .odt" />
+  <input id="set-import" class="d-none" name="file" type="file" accept=".csv, .csv, .xls, .xlsx, .xlsm, .xlsb" />
   <button id="sub-import" class="d-none" type="submit"></button>
 </form>
 {% endblock %}

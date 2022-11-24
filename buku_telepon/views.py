@@ -25,29 +25,31 @@ def validator(data: BukuTelepon):
 
 def import_data(request):
     if request.method == 'POST' and request.FILES['file']:
-        ext = [
-            '.csv', '.xls', '.xlsx', '.xlsm', '.xlsb', '.odf', '.ods', '.odt'
-        ]
+        ext = ['.csv', '.xls', '.xlsx', '.xlsm', '.xlsb']
         file = request.FILES['file']
         file_ext = pathlib.Path(file.name).suffix
 
         if file_ext in ext:
-            if file_ext == '.csv':
-                dfs = pd.read_csv(file, dtype=str)
-            else:
-                if file_ext == ext[1]:
-                    engine = 'xlrd'
-                elif file_ext in ext[2:4]:
-                    engine = 'openpyxl'
-                elif file_ext in ext[5:8]:
-                    engine = 'odf'
+            try:
+                if file_ext == '.csv':
+                    dfs = pd.read_csv(file, dtype=str)
                 else:
-                    engine = 'pyxlsb'
+                    if file_ext == ext[1]:
+                        engine = 'xlrd'
+                    elif file_ext in ext[2:4]:
+                        engine = 'openpyxl'
+                    else:
+                        engine = 'pyxlsb'
 
-                read = pd.read_excel(
-                    file, engine=engine, dtype=str
+                    read = pd.read_excel(
+                        file, engine=engine, dtype=str
+                    )
+                    dfs = pd.DataFrame(read)
+            except:
+                messages.error(
+                    request, 'Terjadi kesalahan saat membaca data!'
                 )
-                dfs = pd.DataFrame(read)
+                return False
 
             s_count = 0
             e_count = 0
