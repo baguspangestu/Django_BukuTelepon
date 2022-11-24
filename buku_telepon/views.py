@@ -45,6 +45,8 @@ def import_data(request):
                         file, engine=engine, dtype=str
                     )
                     dfs = pd.DataFrame(read)
+
+                dfs = dfs.fillna('')
             except:
                 messages.error(
                     request, 'Terjadi kesalahan saat membaca data!'
