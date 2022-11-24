@@ -1,10 +1,10 @@
 # ☎️ Buku Telepon
 
-Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Pringsewu dengan Bahasa Pemrograman Python dan Framework Django.
+Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Pringsewu 2022 dengan Bahasa Pemrograman Python dan Framework Django.
 
 ![Screenshot](application/static/images/screenshot.png)
 
-> [Lihat Demo](https://kelompok1-bukutelepon.onrender.com)
+> [Live Demo](https://kelompok1-bukutelepon.onrender.com)
 
 ### Software
 
@@ -14,6 +14,10 @@ Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Pri
 #### Framework
 
 - Django v3.2.16
+
+#### Database
+
+- SQLite 3
 
 #### Dependencies
 
