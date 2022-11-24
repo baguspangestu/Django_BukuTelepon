@@ -35,3 +35,5 @@ poetry run python manage.py runserver
 ```
 
 ### Sudah disetting untuk di deploy ke [render.com](https://render.com)
+
+@2022 Bagus Pangestu - Creative Common
