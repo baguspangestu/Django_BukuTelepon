@@ -30,24 +30,20 @@ def import_data(request):
         data = BukuTelepon()
         file = request.FILES['file']
         file_ext = pathlib.Path(file.name).suffix
-        if file_ext in ext:
-            fs = FileSystemStorage()
-            filename = fs.save(file.name, file)
-            excel_file = fs.url(filename)
 
+        if file_ext in ext:
             if file_ext == ext[0]:
-                dfs = pd.read_csv('.' + excel_file, dtype=str)
+                dfs = pd.read_csv(file, dtype=str)
             else:
-                data = pd.read_excel(
-                    '.' + excel_file, engine='openpyxl')
-                dfs = pd.DataFrame(
-                    data, columns=['nama', 'no_telepon', 'alamat', 'perusahaan'])
+                read = pd.read_excel(
+                    file, engine='openpyxl', dtype=str
+                )
+                dfs = pd.DataFrame(read)
 
             s_count = 0
             e_count = 0
 
             for df in dfs.itertuples():
-                print(df.nama)
                 data.nama = df.nama
                 data.no_telepon = df.no_telepon
                 data.alamat = df.alamat
