@@ -9,7 +9,6 @@ from django.db.models import Q
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import IntegrityError
-from django.core.files.storage import FileSystemStorage
 
 
 def validator(data: BukuTelepon):
@@ -26,7 +25,9 @@ def validator(data: BukuTelepon):
 
 def import_data(request):
     if request.method == 'POST' and request.FILES['file']:
-        ext = ['.csv', '.xlsx']
+        ext = [
+            '.csv', '.xls', '.xlsx', '.xlsm', '.xlsb', '.odf', '.ods', '.odt'
+        ]
         file = request.FILES['file']
         file_ext = pathlib.Path(file.name).suffix
 
@@ -74,7 +75,8 @@ def import_data(request):
                 )
 
         else:
-            messages.error(request, 'Extensi file hanya diizinkan csv & xlsx')
+            messages.error(
+                request, 'Format file hanya diizinkan .csv, .xls, .xlsx, .xlsm, .xlsb, .odf, .ods, & .odt')
 
         return True
 
