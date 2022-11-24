@@ -42,6 +42,8 @@ def import_data(request):
             s_count = 0
             e_count = 0
 
+            ouaId = []
+
             for df in dfs.itertuples():
                 data = BukuTelepon()
                 data.nama = df.nama
@@ -52,11 +54,24 @@ def import_data(request):
                 try:
                     data.save()
                     s_count += 1
+                    ouaId.append(data.id)
                 except:
                     e_count += 1
 
-            messages.success(
-                request, f'{s_count} data berhasil ditambahkan & {e_count} data error.')
+            request.session['uoaId'] = ouaId
+
+            if s_count > 0:
+                msg = f'{s_count} data berhasil ditambahkan'
+                if e_count > 0:
+                    msg += f'& {e_count} data error.'
+                else:
+                    msg += '.'
+
+                messages.success(request, msg)
+            else:
+                messages.error(
+                    request, 'Terjadi kesalahan saat mengimport data!'
+                )
 
         else:
             messages.error(request, 'Extensi file hanya diizinkan csv & xlsx')
@@ -80,7 +95,7 @@ def index(request):
             Q(alamat__icontains=search) | Q(perusahaan__icontains=search)
         ).distinct().order_by('-id')
 
-    limit = 10
+    limit = 5
     paginator = Paginator(list, limit)
     page = request.GET.get('page')
 
@@ -99,21 +114,17 @@ def index(request):
         if data.number == 1 and num < data.number + 3 or num > data.number - 2 and num < data.number + 2 or data.number == paginator.num_pages and num > data.number - 3:
             pageRange.append(num)
 
-    isAdded = request.session.get('isAdded')
-    updatedId = request.session.get('updatedId')
+    uoaId = request.session.get('uoaId')
 
-    if isAdded:
-        request.session['isAdded'] = None
-    if updatedId:
-        request.session['updatedId'] = None
+    if uoaId:
+        request.session['uoaId'] = None
 
     context = {
         'data': data,
         'count': count,
         'lastCounter': lastCounter,
         'pageRange': pageRange,
-        'isAdded': isAdded,
-        'updatedId': updatedId,
+        'uoaId': uoaId,
     }
 
     return render(request, 'index.html', context)
@@ -133,8 +144,8 @@ def add(request):
         if not alert:
             try:
                 data.save()
+                request.session['uoaId'] = [data.id]
                 messages.success(request, 'Data berhasil ditambahkan.')
-                request.session['isAdded'] = True
                 return redirect('/')
             except IntegrityError as _:
                 messages.error(request, 'Terjadi kesalahan!')
@@ -162,8 +173,8 @@ def update(request, id):
         if not alert:
             try:
                 data.save()
+                request.session['uoaId'] = [data.id]
                 messages.success(request, 'Data berhasil diperbarui.')
-                request.session['updatedId'] = id
                 return redirect('/')
             except IntegrityError as _:
                 messages.error(request, 'Terjadi kesalahan!')

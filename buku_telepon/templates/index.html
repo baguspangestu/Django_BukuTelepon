@@ -67,7 +67,7 @@ Irvanudin
         </thead>
         <tbody>
           {% for item in data %}
-          <tr class="{% if isAdded and forloop.counter == 1 or updatedId == item.id %}table-success{% endif %}">
+          <tr class="{% if item.id in uoaId %}table-success{% endif %}">
             <th scope="row" class="text-center">{{ lastCounter|add:forloop.counter }}</th>
             <td id="item-nama-{{ item.id }}">{{ item.nama }}</td>
             <td id="item-telepon-{{ item.id }}"><a class="text-decoration-none text-body" href="tel:{{ item.no_telepon }}">{{ item.no_telepon }}</a></td>
