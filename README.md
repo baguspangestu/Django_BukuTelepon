@@ -4,7 +4,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 ![Screenshot](application/static/images/screenshot.png)
 
-> [Live Demo](https://kelompok1-bukutelepon.onrender.com)
+> [Live Demo 1](https://kelompok1-bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://kelompok1-bukutelepon.up.railway.app) (US)
 
 ### Software
 
@@ -48,7 +48,15 @@ poetry install
 poetry run python manage.py runserver
 ```
 
-#### Sudah disetting untuk di deploy ke [render.com](https://render.com)
+#### Sudah disetting untuk di deploy ke [render.com](https://render.com) & [railway.app](https://railway.app)
+
+Untuk deploy ke Railway, masukan:
+
+| Key    | Value |
+| ------ | ----- |
+| RENDER | True  |
+
+Di Environment Variable
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
 
