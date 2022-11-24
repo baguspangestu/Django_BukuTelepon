@@ -11,15 +11,15 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 [![Python](https://img.shields.io/badge/Python-3.7.0-blue)](https://www.python.org/downloads)
 [![Poetry](https://img.shields.io/badge/Poetry-1.2.2-orange)](https://python-poetry.org/docs/#installation)
 
-### Framework
+#### Framework
 
 - Django v3.2.16
 
-### Database
+#### Database
 
 - SQLite 3
 
-### Dependencies
+#### Dependencies
 
 | Nama       | Deskripsi                               |
 | ---------- | --------------------------------------- |
@@ -36,19 +36,19 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 git clone https://github.com/baguspangestu/Django_BukuTelepon.git
 ```
 
-### 1. Inisialisasi
+#### 1. Inisialisasi
 
 ```
 poetry install
 ```
 
-### 2. Migrate
+#### 2. Migrate
 
 ```
 poetry run python manage.py migrate
 ```
 
-### 3. Run Server
+#### 3. Run Server
 
 ```
 poetry run python manage.py runserver
