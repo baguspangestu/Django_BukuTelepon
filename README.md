@@ -11,15 +11,15 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 [![Python](https://img.shields.io/badge/Python-3.7.0-blue)](https://www.python.org/downloads)
 [![Poetry](https://img.shields.io/badge/Poetry-1.2.2-orange)](https://python-poetry.org/docs/#installation)
 
-#### Framework
+### Framework
 
 - Django v3.2.16
 
-#### Database
+### Database
 
 - SQLite 3
 
-#### Dependencies
+### Dependencies
 
 | Nama       | Deskripsi                               |
 | ---------- | --------------------------------------- |
@@ -30,19 +30,25 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 | openpyxl   | Engine untuk membaca file xlsx dan xlsm |
 | pyxlsb     | Engine untuk membaca file xlsb          |
 
-### Download
+### 🔥Download
 
 ```
 git clone https://github.com/baguspangestu/Django_BukuTelepon.git
 ```
 
-### Inisialisasi
+### 1. Inisialisasi
 
 ```
 poetry install
 ```
 
-### Run Server
+### 2. Migrate
+
+```
+poetry run python manage.py migrate
+```
+
+### 3. Run Server
 
 ```
 poetry run python manage.py runserver
@@ -56,7 +62,7 @@ Untuk deploy ke Railway, masukan:
 | ------ | ----- |
 | RENDER | True  |
 
-Di Environment Variable
+Di Environment Variable.
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
 
