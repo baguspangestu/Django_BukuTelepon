@@ -4,8 +4,8 @@ Applikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC den
 
 ### Software
 
-[![Python](https://img.shields.io/badge/Python-v3.7-blue)](https://www.python.org/downloads)
-[![Poetry](https://img.shields.io/badge/Poetry-v1.2-green)](https://python-poetry.org/docs/#installation)
+[![Python](https://img.shields.io/badge/Python-^3.7-blue)](https://www.python.org/downloads)
+[![Poetry](https://img.shields.io/badge/Poetry-1.2.2-green)](https://python-poetry.org/docs/#installation)
 
 #### Framework
 
