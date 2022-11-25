@@ -60,10 +60,26 @@ def import_data(request):
 
             for df in dfs.itertuples():
                 data = BukuTelepon()
-                data.nama = df.nama
-                data.no_telepon = df.no_telepon
-                data.alamat = df.alamat
-                data.perusahaan = df.perusahaan
+
+                try:
+                    data.nama = df.nama
+                except:
+                    data.nama = ''
+
+                try:
+                    data.no_telepon = df.no_telepon
+                except:
+                    data.no_telepon = ''
+
+                try:
+                    data.alamat = df.alamat
+                except:
+                    data.alamat = ''
+
+                try:
+                    data.perusahaan = df.perusahaan
+                except:
+                    data.perusahaan = ''
 
                 try:
                     data.save()

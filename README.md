@@ -4,7 +4,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 ![Screenshot](application/static/images/screenshot.png)
 
-> [Live Demo 1](https://bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://kelompok1-bukutelepon.up.railway.app) (US)
+> [Live Demo 1](https://bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://bukutelepon.up.railway.app) (US)
 
 #### Software
 
@@ -70,6 +70,6 @@ Untuk deploy ke Railway, tambahkan Environment Variable:
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
 
-@ 2022 Irvanudin X Bagus Pangestu
+@ 2022 Bagus Pangestu
 
 <baguspangestu@yandex.com>
