@@ -56,7 +56,7 @@ poetry run python manage.py runserver
 
 #### Sudah disetting untuk di deploy ke [render.com](https://render.com) & [railway.app](https://railway.app)
 
-File Setting bluprint Render.com
+File Setting blueprint Render.com
 
 > [render.yaml](render.yaml)
 
