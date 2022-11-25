@@ -56,12 +56,16 @@ poetry run python manage.py runserver
 
 #### Sudah disetting untuk di deploy ke [render.com](https://render.com) & [railway.app](https://railway.app)
 
-Untuk deploy ke Railway, masukan:
+File Setting bluprint Render.com
+
+> render.yaml
+
+Untuk deploy ke Railway, tambahkan Environment Variable:
 
 | Key    | Value |
 | ------ | ----- |
 | RENDER | True  |
 
-Di Environment Variable.
+---
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
