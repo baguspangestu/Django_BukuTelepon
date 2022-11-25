@@ -58,7 +58,7 @@ poetry run python manage.py runserver
 
 File Setting bluprint Render.com
 
-> [render.yaml]
+> [render.yaml](render.yaml)
 
 Untuk deploy ke Railway, tambahkan Environment Variable:
 
