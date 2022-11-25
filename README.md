@@ -4,7 +4,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 ![Screenshot](application/static/images/screenshot.png)
 
-> [Live Demo 1](https://kelompok1-bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://kelompok1-bukutelepon.up.railway.app) (US)
+> [Live Demo 1](https://bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://kelompok1-bukutelepon.up.railway.app) (US)
 
 #### Software
 
