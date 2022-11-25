@@ -65,7 +65,3 @@ Untuk deploy ke Railway, masukan:
 Di Environment Variable.
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
-
-@ 2022 Irvanudin X Bagus Pangestu
-
-<baguspangestu@yandex.com>
