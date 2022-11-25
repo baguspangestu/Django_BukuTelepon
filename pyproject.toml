@@ -16,7 +16,6 @@ openpyxl = "^3.0.10"
 xlrd = "^2.0.1"
 pyxlsb = "^1.0.10"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
