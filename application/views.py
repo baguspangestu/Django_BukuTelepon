@@ -2,7 +2,6 @@ import io
 import xlsxwriter
 import pandas as pd
 import pathlib
-from .config import Config
 from .models import BukuTelepon
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -127,7 +126,7 @@ def index(request):
             Q(alamat__icontains=search) | Q(perusahaan__icontains=search)
         ).distinct().order_by('-id')
 
-    limit = Config.limit
+    limit = 5
     paginator = Paginator(list, limit)
     page = request.GET.get('page')
 
