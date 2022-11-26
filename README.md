@@ -13,7 +13,7 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 #### Framework
 
-- Django v3.2.16
+- Django 3.2.16
 
 #### Database
 
@@ -70,6 +70,6 @@ Untuk deploy ke Railway, tambahkan Environment Variable:
 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
 
-@ 2022 Bagus Pangestu
+Requested by my friend (Irvanudin)
 
-<baguspangestu@yandex.com>
+© 2022 Bagus Pangestu - <baguspangestu@yandex.com>
