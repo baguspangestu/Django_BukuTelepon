@@ -1,4 +1,4 @@
-# ☎️ Buku Telepon
+# ☎️ CRUD Buku Telepon
 
 Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Pringsewu 2022 dengan Bahasa Pemrograman Python dan Framework Django.
 
