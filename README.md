@@ -4,12 +4,11 @@ Aplikasi Web Buku Telepon sebagai tugas kuliah S1 Sistem Informasi ITBA DCC Prin
 
 ![Screenshot](application/static/images/screenshot.png)
 
-> [Live Demo 1](https://bukutelepon.onrender.com) (Singapore) | [Live Demo 2](https://bukutelepon.up.railway.app) (US)
+> <a href="https://bukutelepon.onrender.com" target="_blank">Live Demo 1</a> (Singapore) | <a href="https://bukutelepon.up.railway.app" target="_blank">Live Demo 2</a> (US)
 
 #### Software
 
-[![Python](https://img.shields.io/badge/Python-3.7.0-blue)](https://www.python.org/downloads)
-[![Poetry](https://img.shields.io/badge/Poetry-1.2.2-orange)](https://python-poetry.org/docs/#installation)
+<a href="https://www.python.org/downloads" target="_blank"><img src="https://img.shields.io/badge/Python-3.7.0-blue" /></a> <a href="https://python-poetry.org/docs/#installation" target="_blank"><img src="https://img.shields.io/badge/Poetry-1.2.2-orange" /></a>
 
 #### Framework
 
@@ -68,7 +67,7 @@ Untuk deploy ke Railway, tambahkan Environment Variable:
 
 ---
 
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Requested by my friend (Irvanudin)
 
